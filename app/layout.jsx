@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import {
     Breadcrumb,
@@ -32,29 +32,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className="flex flex-col min-h-screen p-12">
-                <Header />
+            <body>
+                <div className="flex flex-col min-h-screen px-12 py-6">
+                    <Header />
 
-                <Breadcrumb>
-                    <BreadcrumbList>
-                        <BreadcrumbItem>
-                            <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
-                            <BreadcrumbLink href="/components">
-                                Components
-                            </BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
-                            <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                        </BreadcrumbItem>
-                    </BreadcrumbList>
-                </Breadcrumb>
+                    <Breadcrumb className="mt-4">
+                        <BreadcrumbList>
+                            <BreadcrumbItem>
+                                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                                <BreadcrumbLink href="/components">
+                                    Components
+                                </BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                            </BreadcrumbItem>
+                        </BreadcrumbList>
+                    </Breadcrumb>
 
-                <main className="p-12 flex-1">{children}</main>
-                <Footer />
+                    <main className="p-12 flex-1">{children}</main>
+                    <Footer />
+                </div>
             </body>
         </html>
     );
