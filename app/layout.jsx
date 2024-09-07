@@ -3,15 +3,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import CustomBreadcrumb from "@/components/Breadcrumb";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -35,25 +27,7 @@ export default function RootLayout({ children }) {
             <body>
                 <div className="flex flex-col min-h-screen px-12 py-6">
                     <Header />
-
-                    <Breadcrumb className="mt-4">
-                        <BreadcrumbList>
-                            <BreadcrumbItem>
-                                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                            </BreadcrumbItem>
-                            <BreadcrumbSeparator />
-                            <BreadcrumbItem>
-                                <BreadcrumbLink href="/components">
-                                    Components
-                                </BreadcrumbLink>
-                            </BreadcrumbItem>
-                            <BreadcrumbSeparator />
-                            <BreadcrumbItem>
-                                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                            </BreadcrumbItem>
-                        </BreadcrumbList>
-                    </Breadcrumb>
-
+                    <CustomBreadcrumb />
                     <main className="p-12 flex-1">{children}</main>
                     <Footer />
                 </div>
