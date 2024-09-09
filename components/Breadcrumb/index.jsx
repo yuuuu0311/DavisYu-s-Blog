@@ -9,7 +9,6 @@ import {
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
-    BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
@@ -18,23 +17,25 @@ const CustomBreadcrumb = () => {
     const pathArr = path.split("/").filter((path) => path);
 
     return (
-        <Breadcrumb className="mt-4">
-            <BreadcrumbList>
-                <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                </BreadcrumbItem>
-                {pathArr.map((path, index) => (
-                    <Fragment key={path + index}>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
-                            <BreadcrumbLink href={`/${path}`}>
-                                {path}
-                            </BreadcrumbLink>
-                        </BreadcrumbItem>
-                    </Fragment>
-                ))}
-            </BreadcrumbList>
-        </Breadcrumb>
+        pathArr.length !== 0 && (
+            <Breadcrumb className="mt-4">
+                <BreadcrumbList>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    {pathArr.map((path, index) => (
+                        <Fragment key={path + index}>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                                <BreadcrumbLink href={`/${path}`}>
+                                    {decodeURIComponent(path)}
+                                </BreadcrumbLink>
+                            </BreadcrumbItem>
+                        </Fragment>
+                    ))}
+                </BreadcrumbList>
+            </Breadcrumb>
+        )
     );
 };
 

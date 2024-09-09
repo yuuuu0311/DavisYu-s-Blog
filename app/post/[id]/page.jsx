@@ -1,5 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 const PostPage = () => {
-    return <div>post page: </div>;
+    const path = usePathname();
+
+    return <div>{path}</div>;
 };
 
 export default PostPage;

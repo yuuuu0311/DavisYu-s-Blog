@@ -8,6 +8,9 @@ const Home = () => {
             <Link href="/about">
                 <Button>GG</Button>
             </Link>
+            <Link href="/post">
+                <Button>visit post</Button>
+            </Link>
         </div>
     );
 };
