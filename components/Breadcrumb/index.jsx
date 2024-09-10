@@ -14,13 +14,18 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-const CustomBreadcrumb = () => {
+// utils
+import { cn } from "@/lib/utils";
+
+const CustomBreadcrumb = ({ ...res }) => {
     const path = usePathname();
     const pathArr = path.split("/").filter((path) => path);
 
+    const BreadcrumbStyle = cn(`mt-4 ${res.className}`);
+
     return (
         pathArr.length !== 0 && (
-            <Breadcrumb className="mt-4">
+            <Breadcrumb className={BreadcrumbStyle}>
                 <BreadcrumbList>
                     <BreadcrumbItem>
                         <BreadcrumbLink href="/">
@@ -30,11 +35,18 @@ const CustomBreadcrumb = () => {
                     {pathArr.map((path, index) => (
                         <Fragment key={path + index}>
                             <BreadcrumbSeparator />
-                            <BreadcrumbItem>
-                                <BreadcrumbLink href={`/${path}`}>
+
+                            {index !== pathArr.length - 1 ? (
+                                <BreadcrumbItem>
+                                    <BreadcrumbLink href={`/${path}`}>
+                                        {decodeURIComponent(path)}
+                                    </BreadcrumbLink>
+                                </BreadcrumbItem>
+                            ) : (
+                                <BreadcrumbItem className="text-blue-500">
                                     {decodeURIComponent(path)}
-                                </BreadcrumbLink>
-                            </BreadcrumbItem>
+                                </BreadcrumbItem>
+                            )}
                         </Fragment>
                     ))}
                 </BreadcrumbList>

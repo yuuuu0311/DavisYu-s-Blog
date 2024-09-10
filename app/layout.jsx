@@ -3,7 +3,6 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CustomBreadcrumb from "@/components/Breadcrumb";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -25,10 +24,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <div className="flex flex-col min-h-screen px-12 py-6">
+                <div className="flex flex-col h-screen px-12 py-6">
                     <Header />
-                    <CustomBreadcrumb />
-                    <main className="p-12 flex-1">{children}</main>
+                    <main className="py-6 flex-1 flex overflow-hidden">
+                        {children}
+                    </main>
                     <Footer />
                 </div>
             </body>
