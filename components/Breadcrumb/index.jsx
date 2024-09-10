@@ -1,5 +1,7 @@
 "use client";
 
+import { FaHome } from "react-icons/fa";
+
 // hooks
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
@@ -21,7 +23,9 @@ const CustomBreadcrumb = () => {
             <Breadcrumb className="mt-4">
                 <BreadcrumbList>
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                        <BreadcrumbLink href="/">
+                            <FaHome />
+                        </BreadcrumbLink>
                     </BreadcrumbItem>
                     {pathArr.map((path, index) => (
                         <Fragment key={path + index}>
