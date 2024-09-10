@@ -1,6 +1,5 @@
 import {
     Accordion,
-    AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
@@ -20,10 +19,10 @@ const PostAccordion = () => {
                     <AccordionItem
                         value={cate.catName + index}
                         key={cate.catName + index}
-                        className="data-[state=closed]:text-zinc-400 data-[state=open]:bg-zinc-100 transition px-4"
+                        className="data-[state=closed]:text-zinc-400 transition px-4"
                     >
                         <AccordionTrigger>{cate.catName}</AccordionTrigger>
-                        <div className="pl-2">
+                        <div>
                             {cate.items.map((item, index) => {
                                 return (
                                     <LinkItem

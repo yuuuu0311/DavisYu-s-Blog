@@ -27,7 +27,7 @@ const CustomBreadcrumb = ({ ...res }) => {
         pathArr.length !== 0 && (
             <Breadcrumb className={BreadcrumbStyle}>
                 <BreadcrumbList>
-                    <BreadcrumbItem>
+                    <BreadcrumbItem className="hover:text-green-500">
                         <BreadcrumbLink href="/">
                             <FaHome />
                         </BreadcrumbLink>
@@ -37,13 +37,13 @@ const CustomBreadcrumb = ({ ...res }) => {
                             <BreadcrumbSeparator />
 
                             {index !== pathArr.length - 1 ? (
-                                <BreadcrumbItem>
+                                <BreadcrumbItem className="hover:text-green-500">
                                     <BreadcrumbLink href={`/${path}`}>
                                         {decodeURIComponent(path)}
                                     </BreadcrumbLink>
                                 </BreadcrumbItem>
                             ) : (
-                                <BreadcrumbItem className="text-blue-500">
+                                <BreadcrumbItem className="text-green-500">
                                     {decodeURIComponent(path)}
                                 </BreadcrumbItem>
                             )}

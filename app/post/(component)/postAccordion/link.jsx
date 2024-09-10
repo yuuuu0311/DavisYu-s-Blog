@@ -9,15 +9,13 @@ import { cn } from "@/lib/utils";
 const LinkItem = ({ children, href }) => {
     const path = usePathname();
 
-    const activeStyle = cn({
-        "text-green-500": path === href,
+    const activeStyle = cn("transition bg-transparent", {
+        "bg-zinc-200 ": path === href,
     });
 
     return (
-        <AccordionContent>
-            <Link href={href} className={activeStyle}>
-                {children}
-            </Link>
+        <AccordionContent className={activeStyle}>
+            <Link href={href}>{children}</Link>
         </AccordionContent>
     );
 };

@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <header className="sticky top-0 py-6 flex justify-between bg-white border-b-[1px] border-solid border-zinc-200">
             GG
-            <Drawer>
+            {/* <Drawer>
                 <DrawerTrigger>Open</DrawerTrigger>
                 <DrawerContent>
                     <DrawerHeader>
@@ -30,7 +30,7 @@ const Header = () => {
                         </DrawerClose>
                     </DrawerFooter>
                 </DrawerContent>
-            </Drawer>
+            </Drawer> */}
         </header>
     );
 };
