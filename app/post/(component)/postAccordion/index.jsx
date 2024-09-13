@@ -5,14 +5,15 @@ import {
 } from "@/components/ui/accordion";
 import LinkItem from "post/(component)/postAccordion/link";
 
-import postData from "post/data.js";
+import { postData } from "post/data.js";
 
 const PostAccordion = () => {
     return (
         <Accordion
             type="single"
             collapsible
-            className="w-56 max-h-full overflow-auto "
+            className="w-56 max-h-full overflow-auto"
+            defaultValue="javascript0"
         >
             {postData.map((cate, index) => {
                 return (

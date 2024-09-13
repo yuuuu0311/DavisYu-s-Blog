@@ -1,19 +1,29 @@
-import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-} from "@/components/ui/drawer";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
     return (
-        <header className="sticky top-0 py-6 flex justify-between bg-white border-b-[1px] border-solid border-zinc-200">
-            GG
+        <header className="sticky top-0 py-6 flex items-baseline gap-12 bg-white border-b-[1px] border-solid border-zinc-200">
+            <h3 className="text-lg font-bold animate-fade-up animate-once">
+                <Link href="/">Davis Yu</Link>
+            </h3>
+            <ul className="flex gap-4">
+                <li>
+                    <Link href="/post">post</Link>
+                </li>
+                <li>
+                    <Link href="/post">post</Link>
+                </li>
+                <li>
+                    <Link href="/post">post</Link>
+                </li>
+                <li>
+                    <Link href="/post">post</Link>
+                </li>
+                <li>
+                    <Link href="/post">post</Link>
+                </li>
+            </ul>
             {/* <Drawer>
                 <DrawerTrigger>Open</DrawerTrigger>
                 <DrawerContent>

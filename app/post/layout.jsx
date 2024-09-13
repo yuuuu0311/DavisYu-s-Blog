@@ -1,3 +1,4 @@
+// components
 import CustomBreadcrumb from "@/components/Breadcrumb";
 import PostAccordion from "post/(component)/postAccordion";
 

@@ -1,4 +1,4 @@
-const postData = [
+export const postData = [
     {
         catName: "javascript",
         items: [
@@ -13,5 +13,3 @@ const postData = [
         ],
     },
 ];
-
-export default postData;
