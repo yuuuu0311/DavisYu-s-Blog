@@ -7,8 +7,8 @@ export const postData = [
                 path: "/post/testPage",
             },
             {
-                label: "測試測試2",
-                path: "/post/testPage2",
+                label: "hellow",
+                path: "/post/hellow",
             },
         ],
     },
