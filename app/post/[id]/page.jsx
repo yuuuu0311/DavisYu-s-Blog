@@ -1,20 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+
+import { GET } from "@/lib/http";
+import { useEffect, useState } from "react";
 
 const TestPage = () => {
     const { id: postID } = useParams();
-    const [post, setPost] = useState("null");
+    const [isLoading, setIsLoading] = useState(false);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
-        fetch(`/api/post?postID=${postID}`)
-            .then((response) => response.json())
-            .then((result) => console.log(result))
-            .catch((error) => console.log(error));
-    }, []);
+        (async () => {
+            try {
+                setIsLoading(true);
+                const result = await GET(`/api/post?postID=${postID}`);
+                setPost(result);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setIsLoading(false);
+            }
+        })();
+    }, [postID]);
 
-    return <div>GG</div>;
+    return <div>{post?.title}</div>;
 };
 
 export default TestPage;
