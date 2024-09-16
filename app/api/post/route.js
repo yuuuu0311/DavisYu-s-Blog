@@ -14,10 +14,11 @@ export const GET = async (req) => {
     const postPath = path.join(postsDirectory, `${postID}.md`);
 
     const postData = fs.readFileSync(postPath, "utf8");
-    const matterResult = matter(postData);
+    const { data, content } = matter(postData);
 
     return NextResponse.json({
         message: "hello",
-        ...matterResult.data,
+        ...data,
+        content,
     });
 };
