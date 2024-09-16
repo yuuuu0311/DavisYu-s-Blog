@@ -28,8 +28,14 @@ const TestPage = () => {
 
     return (
         <div>
-            <PageTitle>{post?.title}</PageTitle>
-            <Markdown>{post?.content}</Markdown>
+            <div className="flex flex-col gap-4 pb-6">
+                <PageTitle>{post?.title}</PageTitle>
+                <p className="text-xs ">
+                    {post?.minsToRead && `${post?.minsToRead} min read · `}
+                    發佈於 {post?.date}
+                </p>
+            </div>
+            <Markdown className="leading-8">{post?.content}</Markdown>
         </div>
     );
 };

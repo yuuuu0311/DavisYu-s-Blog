@@ -8,7 +8,7 @@ export default function PostPageLayout({ children }) {
             <PostAccordion />
             <div className="flex-1 overflow-auto">
                 <CustomBreadcrumb />
-                <main className="mt-6">{children}</main>
+                <main className="py-12">{children}</main>
             </div>
         </div>
     );

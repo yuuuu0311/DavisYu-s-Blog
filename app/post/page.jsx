@@ -7,8 +7,6 @@ const PostListPage = () => {
 
     return (
         <div>
-            <h3 className="mb-4">這邊放了所有的文章</h3>
-
             <ul className="flex flex-col gap-2">
                 {postData.map((post, index) => (
                     <li key={post.id + index}>
