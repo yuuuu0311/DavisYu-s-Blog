@@ -16,4 +16,13 @@ export const postData = [
             },
         ],
     },
+    {
+        catName: "生活",
+        items: [
+            {
+                label: "淺談警界人才流失",
+                path: "/post/淺談警界人才流失",
+            },
+        ],
+    },
 ];

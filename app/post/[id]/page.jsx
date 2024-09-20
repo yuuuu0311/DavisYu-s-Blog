@@ -5,7 +5,9 @@ import { GET } from "@/lib/http";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
 import PageTitle from "post/(component)/pageTitle";
+import { Badge } from "@/components/ui/badge";
 
 const TestPage = () => {
     const { id: postID } = useParams();
@@ -26,16 +28,45 @@ const TestPage = () => {
         })();
     }, [postID]);
 
+    const mdOptions = {
+        overrides: {
+            h2: {
+                props: {
+                    className: "text-lg font-bold",
+                },
+            },
+            img: {
+                component: Image,
+                props: {
+                    className: "w-1/2",
+                    width: 500,
+                    height: 500,
+                },
+            },
+        },
+    };
+
     return (
         <div>
-            <div className="flex flex-col gap-4 pb-6">
+            <div className="flex flex-col gap-4 pb-12">
                 <PageTitle>{post?.title}</PageTitle>
                 <p className="text-xs ">
                     {post?.minsToRead && `${post?.minsToRead} min read · `}
                     發佈於 {post?.date}
                 </p>
+                <div className="flex gap-4">
+                    {post?.tag?.map((post) => (
+                        <Badge variant="secondary">{post}</Badge>
+                    ))}
+                </div>
             </div>
-            <Markdown className="leading-8">{post?.content}</Markdown>
+
+            <Markdown
+                options={mdOptions}
+                className="leading-8 flex flex-col gap-6"
+            >
+                {post?.content}
+            </Markdown>
         </div>
     );
 };

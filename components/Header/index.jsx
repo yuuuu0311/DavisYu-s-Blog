@@ -11,18 +11,6 @@ const Header = () => {
                 <li>
                     <Link href="/post">post</Link>
                 </li>
-                <li>
-                    <Link href="/post">post</Link>
-                </li>
-                <li>
-                    <Link href="/post">post</Link>
-                </li>
-                <li>
-                    <Link href="/post">post</Link>
-                </li>
-                <li>
-                    <Link href="/post">post</Link>
-                </li>
             </ul>
             {/* <Drawer>
                 <DrawerTrigger>Open</DrawerTrigger>

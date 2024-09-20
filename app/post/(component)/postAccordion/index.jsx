@@ -7,7 +7,12 @@ import LinkItem from "post/(component)/postAccordion/link";
 
 import { postData } from "post/data.js";
 
+// hooks
+// import useCountStore from "@/app/hooks/useCountStore";
+
 const PostAccordion = () => {
+    // const { defaultValue, increasePopulation } = useCountStore();
+
     return (
         <Accordion
             type="single"
