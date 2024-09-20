@@ -56,7 +56,9 @@ const TestPage = () => {
                 </p>
                 <div className="flex gap-4">
                     {post?.tag?.map((post) => (
-                        <Badge variant="secondary">{post}</Badge>
+                        <Badge variant="secondary" key={post}>
+                            {post}
+                        </Badge>
                     ))}
                 </div>
             </div>
