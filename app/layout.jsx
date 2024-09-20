@@ -24,9 +24,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <div className="flex flex-col h-screen px-12 py-6">
+                <div className="flex flex-col h-screen md:px-12 px-6 md:py-6 py-4">
                     <Header />
-                    <main className="py-6 flex-1 flex overflow-hidden">
+                    <main className="flex-1 flex overflow-hidden">
                         {children}
                     </main>
                     <Footer />

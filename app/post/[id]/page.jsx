@@ -38,7 +38,7 @@ const TestPage = () => {
             img: {
                 component: Image,
                 props: {
-                    className: "w-1/2",
+                    className: "md:w-1/2 w-full rounded",
                     width: 500,
                     height: 500,
                 },

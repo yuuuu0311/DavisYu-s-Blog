@@ -17,7 +17,7 @@ const PostAccordion = () => {
         <Accordion
             type="single"
             collapsible
-            className="w-56 max-h-full overflow-auto"
+            className="w-56 max-h-full overflow-auto md:py-6 md:block hidden"
             defaultValue="javascript0"
         >
             {postData.map((cate, index) => {
