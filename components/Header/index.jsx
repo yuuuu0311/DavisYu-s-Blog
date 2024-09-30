@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
     return (
-        <header className="sticky top-0 md:py-6 pb-2 flex items-baseline gap-12 bg-[--background] border-b-[1px] border-solid border-zinc-200">
+        <header className="md:py-6 md:px-8 py-2 px-4 flex items-baseline gap-12 bg-[--background] border-b-[1px] border-solid border-zinc-200">
             <h3 className="text-lg font-bold animate-fade-up animate-once">
                 <Link href="/">Davis Yu</Link>
             </h3>

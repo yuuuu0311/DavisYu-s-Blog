@@ -17,7 +17,7 @@ const PostAccordion = () => {
         <Accordion
             type="single"
             collapsible
-            className="w-56 max-h-full overflow-auto md:py-6 md:block hidden"
+            className="w-64 max-h-full overflow-auto md:block hidden pl-12 py-8"
             defaultValue="javascript0"
         >
             {postData.map((cate, index) => {
@@ -25,7 +25,7 @@ const PostAccordion = () => {
                     <AccordionItem
                         value={cate.catName + index}
                         key={cate.catName + index}
-                        className="data-[state=closed]:text-zinc-400 transition px-4"
+                        className="data-[state=closed]:text-zinc-400 transition"
                     >
                         <AccordionTrigger>{cate.catName}</AccordionTrigger>
                         <div>

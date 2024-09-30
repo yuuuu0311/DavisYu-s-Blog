@@ -48,7 +48,7 @@ const TestPage = () => {
 
     return (
         <div>
-            <div className="flex flex-col gap-4 pb-12">
+            <div className="flex flex-col gap-4 md:py-12 py-8">
                 <PageTitle>{post?.title}</PageTitle>
                 <p className="text-xs ">
                     {post?.minsToRead && `${post?.minsToRead} min read · `}

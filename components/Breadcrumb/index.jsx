@@ -21,7 +21,7 @@ const CustomBreadcrumb = ({ ...res }) => {
     const path = usePathname();
     const pathArr = path.split("/").filter((path) => path);
 
-    const BreadcrumbStyle = cn(`mt-4 ${res.className}`);
+    const BreadcrumbStyle = cn(`md:mt-4 ${res.className}`);
 
     return (
         pathArr.length !== 0 && (
