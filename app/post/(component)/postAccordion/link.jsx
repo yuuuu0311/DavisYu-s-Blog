@@ -10,7 +10,7 @@ const LinkItem = ({ children, href }) => {
     const path = usePathname();
 
     const activeStyle = cn("transition bg-transparent", {
-        "bg-zinc-200 ": path === href,
+        // "bg-zinc-200 ": path === href,
     });
 
     return (

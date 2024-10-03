@@ -25,7 +25,7 @@ const PostAccordion = () => {
                     <AccordionItem
                         value={cate.catName + index}
                         key={cate.catName + index}
-                        className="data-[state=closed]:text-zinc-400 transition"
+                        className="data-[state=open]:text-green-400 transition"
                     >
                         <AccordionTrigger>{cate.catName}</AccordionTrigger>
                         <div>
