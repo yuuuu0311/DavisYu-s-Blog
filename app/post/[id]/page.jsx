@@ -38,6 +38,7 @@ const TestPage = () => {
                     className: "text-lg font-bold",
                 },
             },
+
             img: {
                 component: Image,
                 props: {
@@ -47,9 +48,15 @@ const TestPage = () => {
                 },
             },
 
+            a: {
+                props: {
+                    className: "text-green-500 mx-1",
+                },
+            },
+
             code: {
                 props: {
-                    className: cn("bg-gray-300 rounded text-sm px-1", {
+                    className: cn("bg-gray-300 rounded text-sm px-1 mx-1", {
                         "bg-gray-700 text-green-500": isDark(),
                     }),
                 },
@@ -75,9 +82,10 @@ const TestPage = () => {
                     <CopyBlock
                         text={node.text}
                         language={node.lang}
-                        wrapLines={true}
                         showLineNumbers={true}
                         theme={dracula}
+                        className="!overflow-auto !max-w-full"
+                        codeBlock
                     />
                 );
             }

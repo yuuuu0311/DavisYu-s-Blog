@@ -14,7 +14,7 @@ const PostListPage = () => {
                         key={post.id + index}
                         className="hover:text-green-500 transition"
                     >
-                        <div className="md:flex gap-4 justify-between">
+                        <div className="flex gap-1 md:gap-4 flex-col md:flex-row md:justify-between mb-2 md:mb-0">
                             <Link href={`/post/${post.id}`}>
                                 <p className="text-lg">{post.title}</p>
                             </Link>
