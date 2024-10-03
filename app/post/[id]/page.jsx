@@ -1,5 +1,6 @@
 "use client";
-import Markdown from "markdown-to-jsx";
+import Markdown, { RuleType } from "markdown-to-jsx";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 import { GET } from "@/lib/http";
 import { useParams } from "next/navigation";
@@ -38,11 +39,46 @@ const TestPage = () => {
             img: {
                 component: Image,
                 props: {
-                    className: "md:w-1/2 w-full rounded",
                     width: 500,
                     height: 500,
+                    className: "md:w-1/2 w-full rounded-lg transition",
                 },
             },
+
+            code: {
+                props: {
+                    className: "bg-gray-300 rounded text-sm px-1",
+                },
+            },
+
+            ul: {
+                props: {
+                    className: "pl-4",
+                },
+            },
+
+            li: {
+                props: {
+                    className: "list-disc",
+                    key: "0000",
+                },
+            },
+        },
+
+        renderRule(next, node) {
+            if (node.type === RuleType.codeBlock) {
+                return (
+                    <CopyBlock
+                        text={node.text}
+                        language={node.language}
+                        showLineNumbers={true}
+                        theme={dracula}
+                        codeBlock
+                    />
+                );
+            }
+
+            return next();
         },
     };
 

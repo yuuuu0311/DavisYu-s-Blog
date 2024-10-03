@@ -8,13 +8,13 @@ const PostListPage = () => {
 
     return (
         <div>
-            <ul className="flex flex-col gap-6">
+            <ul className="flex flex-col gap-6 mt-8">
                 {postData.map((post, index) => (
                     <li
                         key={post.id + index}
                         className="hover:text-green-500 transition"
                     >
-                        <div className="flex gap-4 justify-between">
+                        <div className="md:flex gap-4 justify-between">
                             <Link href={`/post/${post.id}`}>
                                 <p className="text-lg">{post.title}</p>
                             </Link>
@@ -27,7 +27,7 @@ const PostListPage = () => {
                             </div>
                         </div>
 
-                        <span className="text-xs">{post.date}</span>
+                        <span className="text-xs opacity-40">{post.date}</span>
                     </li>
                 ))}
             </ul>
