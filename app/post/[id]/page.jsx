@@ -1,8 +1,10 @@
 "use client";
 import Markdown, { RuleType } from "markdown-to-jsx";
 import { CopyBlock, dracula } from "react-code-blocks";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import { GET } from "@/lib/http";
+import { cn, isDark } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -47,13 +49,15 @@ const TestPage = () => {
 
             code: {
                 props: {
-                    className: "bg-gray-300 rounded text-sm px-1",
+                    className: cn("bg-gray-300 rounded text-sm px-1", {
+                        "bg-gray-700 text-green-500": isDark(),
+                    }),
                 },
             },
 
             ul: {
                 props: {
-                    className: "pl-4",
+                    className: "pl-8",
                 },
             },
 
@@ -70,10 +74,10 @@ const TestPage = () => {
                 return (
                     <CopyBlock
                         text={node.text}
-                        language={node.language}
+                        language={node.lang}
+                        wrapLines={true}
                         showLineNumbers={true}
                         theme={dracula}
-                        codeBlock
                     />
                 );
             }
