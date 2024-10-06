@@ -1,5 +1,5 @@
 ---
-title: "Ｎext.js 的環境變數"
+title: "Next.js 的環境變數"
 date: "2024-10-6"
 cate: "next.js"
 tag: ["next.js", ".env", "secret"]
