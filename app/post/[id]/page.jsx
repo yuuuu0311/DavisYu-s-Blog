@@ -71,7 +71,7 @@ const TestPage = () => {
 
             <Markdown
                 options={mdOptions}
-                className="leading-8 flex flex-col gap-4"
+                className="leading-8 flex flex-col md:gap-4 gap-8"
             >
                 {post?.content}
             </Markdown>

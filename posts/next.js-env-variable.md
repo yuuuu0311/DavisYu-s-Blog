@@ -50,7 +50,7 @@ fetch(`${BASE_URL}/info`).then((response) => {
 
 ### 不同環境變數的使用時機
 
-除了有所有環境通用的 `.env` 外，Next 還提供 **development**、**test** 及 **production** 三種環境，這樣就可以順利在不同環境下使用不同邊變數
+除了有所有環境通用的 `.env` 外，Next 還提供 **development**、**test** 及 **production** 三種環境，只要在`.env`後加上環境名稱，這樣就可以順利在不同環境下使用不同變數
 
 ![環境變數2](/images/env_2.png "環境變數2")
 
