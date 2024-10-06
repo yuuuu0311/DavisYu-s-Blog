@@ -24,6 +24,10 @@ export const postData = [
                 label: "Routing",
                 path: "/post/next.js-routing",
             },
+            {
+                label: "環境變數",
+                path: "/post/next.js-env-variable",
+            },
         ],
     },
 

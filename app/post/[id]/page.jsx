@@ -1,14 +1,13 @@
 "use client";
 import Markdown, { RuleType } from "markdown-to-jsx";
 import { CopyBlock, dracula } from "react-code-blocks";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { overrides } from "post/[id]/overrides";
 
 import { GET } from "@/lib/http";
-import { cn, isDark } from "@/lib/utils";
+
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
 import PageTitle from "post/(component)/pageTitle";
 import { Badge } from "@/components/ui/badge";
 
@@ -33,49 +32,8 @@ const TestPage = () => {
 
     const mdOptions = {
         overrides: {
-            h2: {
-                props: {
-                    className: "text-lg font-bold",
-                },
-            },
-
-            img: {
-                component: Image,
-                props: {
-                    width: 500,
-                    height: 500,
-                    className: "md:w-1/2 w-full rounded-lg transition",
-                },
-            },
-
-            a: {
-                props: {
-                    className: "text-green-500 mx-1",
-                },
-            },
-
-            code: {
-                props: {
-                    className: cn("bg-gray-300 rounded text-sm px-1 mx-1", {
-                        "bg-gray-700 text-green-500": isDark(),
-                    }),
-                },
-            },
-
-            ul: {
-                props: {
-                    className: "pl-8",
-                },
-            },
-
-            li: {
-                props: {
-                    className: "list-disc",
-                    key: "0000",
-                },
-            },
+            ...overrides,
         },
-
         renderRule(next, node) {
             if (node.type === RuleType.codeBlock) {
                 return (
@@ -113,7 +71,7 @@ const TestPage = () => {
 
             <Markdown
                 options={mdOptions}
-                className="leading-8 flex flex-col gap-6"
+                className="leading-8 flex flex-col gap-4"
             >
                 {post?.content}
             </Markdown>
