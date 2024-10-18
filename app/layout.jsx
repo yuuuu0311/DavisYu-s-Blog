@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <div className="flex flex-col h-screen">
+                <div className="flex flex-col h-screen tracking-wide">
                     <Header />
                     <main className="flex-1 flex overflow-hidden">
                         {children}

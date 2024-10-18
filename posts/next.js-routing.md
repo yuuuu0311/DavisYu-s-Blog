@@ -1,9 +1,10 @@
 ---
-title: "Ｎext.js 的 routing"
+title: "Next.js 的 routing"
 date: "2024-09-30"
 cate: "next.js"
 tag: ["next.js", "App router", "routing"]
 minsToRead: 3
+desc: "這是一段描述"
 ---
 
 Next.js 的路由系統是基於專案的資料夾結構

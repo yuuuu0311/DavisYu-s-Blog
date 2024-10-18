@@ -1,9 +1,10 @@
 ---
 title: "Next.js 的環境變數"
-date: "2024-10-6"
+date: "2024-10-06"
 cate: "next.js"
 tag: ["next.js", ".env", "secret"]
 minsToRead: 5
+desc: "由於next打包預設會使用prod build，先前專案在打包上測試站/正式站都需要手動調整環境變數，試試看有沒有更好的解決方案"
 ---
 
 Next 也支援將環境變數存放在 `.env` 檔案中，並在不同環境中引入使用。
