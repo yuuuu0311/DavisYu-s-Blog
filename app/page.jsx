@@ -25,6 +25,7 @@ const Home = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-8">
                     {latestPost.map((post) => (
                         <Link
+                            key={post.id}
                             href={`/post/${post.id}`}
                             className="h-full transition inline-block group"
                         >

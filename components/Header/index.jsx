@@ -9,7 +9,7 @@ const Header = () => {
             </h3>
             <ul className="flex gap-4">
                 <li>
-                    <Link href="/post">post</Link>
+                    <Link href="/post">所有文章</Link>
                 </li>
             </ul>
             {/* <Drawer>
