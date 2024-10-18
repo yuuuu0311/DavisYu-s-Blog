@@ -4,6 +4,8 @@ import { cn, isDark } from "@/lib/utils";
 
 import TestButton from "./(component)/next.js-env-variable/TestButton";
 
+import ZoomImg from "@/components/ZoomImg";
+
 export const overrides = {
     h1: {
         props: {
@@ -26,11 +28,11 @@ export const overrides = {
         },
     },
     img: {
-        component: Image,
+        component: ZoomImg,
         props: {
             width: 500,
             height: 500,
-            className: "md:w-1/2 w-full rounded-lg transition",
+            className: "md:w-1/2 w-full",
         },
     },
 
